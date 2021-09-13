@@ -4,6 +4,7 @@
 }
 html {
     margin: 0;
+    width: 100%;
 }
 body {
     font-family: fira sans;
@@ -46,8 +47,7 @@ nav > a {
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
+
     width: 100%;
     text-align: center;
 }
@@ -109,6 +109,7 @@ nav > a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
 }
 
 .portfolio-card {
@@ -251,7 +252,10 @@ section {
 /****MEDIAQUERY****/
 
 @media only screen and (min-width: 768px) {
-    
+    nav {
+      display: flex;
+      justify-content: space-around;
+    }
     .row {
         flex-direction: row;
     }
