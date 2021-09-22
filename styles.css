@@ -14,9 +14,10 @@ body {
 }
 
 img {
-    height: 350px;
-    width: 300px;
+ width: 100%;
+ height: 300px;
 }
+
 
 p {
     color:#011F26;
@@ -24,13 +25,20 @@ p {
 
 h2 {
     color:#002037;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
+h3 {
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
+}
+
 a {
-    text-decoration: none;
-    color: #223A40;
-    font-size: 1.3rem;
+  text-decoration: none;
+  color: #223A40;
+  font-size: 1.3rem;
 }
 
 
@@ -42,7 +50,7 @@ nav > a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    background-color: #002037;
+    background-color: #303C6C;
     width: 100%;
 }
 
@@ -53,92 +61,205 @@ nav {
 }
 
 nav > a:hover {
-    background-color: #F1B602;
+    color: #F4976C;
 }
 
 
 /****WELCOME AREA***/
-.container-1 {
+#introduction {
     display: flex;
-    background-color:#D99A2B;
+    background-color: #B4DFE5;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
-    height: 400px;
 }
 
 .intro {
-    margin-left: 20px;
-}
-
-.profile-pic {
-    height: 200px;
-    width: 200px;
-    box-shadow: 15px 15px#223A40;
-    margin-right: 20px;
+  padding: 15px;
+  font-size: 50px;
+  margin: 15px;
 }
 
 /****ABOUT ME****/
 #about {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+
 }
 
 .content-container {
     display: flex;
-    flex-direction: row;
-    width: 50%;
+    flex-direction: column;
+    width: 85%;
     background-color: #fff;
+    border:1px solid #002037;
+}
+
+.browser-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.circle-1 {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: #fe5e57;
+}
+
+.circle-1 > p {
+  color: #be4943;
+  padding-left: 3.2px;
+  font-size: .75rem;
+
+  margin: -1px;
+}
+
+.circle-2 {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: #febc2e;
+  margin: 0px 5px;
+}
+
+.circle-2 > p {
+  transform: rotate(90deg);
+  color: #cf9925;
+  font-size: .7rem;
+  margin-top: 3.8px;
+}
+
+.circle-3 {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: #29c83f;
+}
+
+.up {
+  transform: rotate(45deg);
+  color: #239933;
+  font-size: .5rem;
+  padding: 2px;
+}
+
+.down{
+  transform: rotate(45deg);
+  color: #239933;
+  font-size: .5rem;
+  padding: 1px;
+  margin-right: -26px;
 }
 
 .content-text {
     padding: 10px;
+    line-height: 1.5rem;
 }
 
+.content-first {
+  font-weight: 600;
+  padding: 10px;
+  line-height: 1.5rem;
+
+}
 
 /****PORTFOLIO****/
 #port {
-    display: flex;
-    flex-direction:column;
-    background-color: #DDEDFF;
-   }
+  display: flex;
+  flex-direction:column;
+  background-color: #B4DFE5;
+}
 
 
 .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .portfolio-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    margin: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 350px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 7, 17, 0.932);
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio-card:hover::after {
+  opacity: 1;
+}
+
+.portfolio-card img {
+  width: 100%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .portfolio-img-desc {
-    background-color:#3B5998;
-    margin-top: 16px;
-    font-size: .9rem;
-    height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  z-index: 5;
+  opacity: 0;
 }
+
+.portfolio-card:hover .portfolio-img-desc  {
+  opacity: 1;
+  left: 50%;
+}
+
+/***  {
+  display: flex;
+  flex-direction: column;
+  font-size: .9rem;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #F4976C;
+
+}->***/
 
 .portfolio-img-desc > p, a{
-    color: white;
-    padding: 20px;
-    text-align: center;
+    color: BLACK;
+    text-align: left;
 }
 
-.linked {
-    background-color: #55ACEE;
-    width: 230px;
-    text-align: center;
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
+
 
 /****FOOTER****/
 
@@ -146,47 +267,23 @@ nav > a:hover {
 #footer {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
-
 section {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-  section:nth-child(1){
-    color: #fff;
-  }
-  
-  section:nth-child(2){
-    color: #1D212B;
-    background: #fff;
-  }
-  
-  section:nth-child(3){
-    color: #fff;
-  }
-  
-  
-  section .container{
-    margin: 100px;
-  }
-  
-  section h1{
-    font-size: 60px;
-  }
-  
-  section h2{
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-  }
+
+section h2{
+  text-align: center;
+  text-transform: uppercase;
+}
   
   section .row .portfolio-card{
     margin: 20px;
-    padding: 20px;
   }
   
   section .cards .portfolio-card h3{
@@ -196,18 +293,6 @@ section {
     margin-bottom: 10px;
   }
   
-  .reveal{
-    position: relative;
-    transform: translateY(120px);
-    opacity: 0;
-    transition: all 1s ease;
-  }
-  
-  .reveal.active{
-    transform: translateY(0px);
-    opacity: 1;
-  }
-
   .contact {
       text-align: center;
       margin: 20px;
@@ -252,15 +337,38 @@ section {
 /****MEDIAQUERY****/
 
 @media only screen and (min-width: 768px) {
+    
+
+    
     nav {
       display: flex;
       justify-content: space-around;
     }
+
+    .intro {
+      padding: 15px;
+      margin: 15px;
+      font-size: 2.3rem;
+    }
+    .profile-pic {
+      width: 370px;
+      height: 300px;
+    }
+    
+    .container-1 {
+      justify-content: space-evenly;
+    }
+
     .row {
         flex-direction: row;
     }
     .portfolio-card {
         width: 20%;
+    }
+
+    #footer {
+      display: flex;
+      flex-direction: column;
     }
 
 }

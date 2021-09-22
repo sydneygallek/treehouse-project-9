@@ -12,81 +12,75 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="styles.css" rel="stylesheet">
     <title>Sydney Gallek</title>
-  </head>
+</head>
   <body>
-    <nav>
-        <a class="home-tab" href="#body">Home</a>
-        <a class="about-tab" href="#about">About</a>
-        <a href="#port">Portfolio</a>
-        <a href="#footer">Contact</a>
-    </nav>
+    
+<!--NAVIGATION-->
 
-    <div class="container-1"> 
+<nav>
+     <a class="home-tab" href="#body">Home</a>
+     <a class="about-tab" href="#about">About</a>
+     <a href="#port">Portfolio</a>
+     <a href="#footer">Contact</a>
+</nav>
+
+<section id="introduction" class="container"> 
+    <div class="intro-container">
     <h1 class="intro">Nice to meet you, I'm Syd!</h1>
+    </div>
+</section>
 
-    <img src="images/profile.jpg" alt="picture of Sydney Gallek" class="profile-pic">
-
-</div>
-        <!-- About Section -->
-<section id="about" class="container reveal">
+<!--ABOUT-->
+<section id="about" class="container">
         <h2>About Me</h2>
     <div class="content-container">
-    <p class="content-text">Hey there! I am a junior software developer based in Raleigh, North Carolina.</p>
-        <p class="content-text">If you are in need of a beautiful simple website, I would love to help. I look forward to talking to you soon!</p>
+        <div class="browser-bar">
+            <div class="circle-1"><p>&#10005;</p></div>
+            <div class="circle-2"><p>|<p></div>
+            <div class="circle-3"><p class="up">&#10094;</p><p class="down">&#10095;</p></div>
+        </div>
+    <p class="content-first">Hey there! I am a junior software developer based in Raleigh, North Carolina.</p>
+    <p class="content-text">I studied International Relations at the University of North Carolina Chapel Hill, but when I graduated college I found a new passion- front end web development! I have certifications from Coursera, Codeacademy, Free Code Camp and my most recent degree from Treehouse. Below you can find some of the HTML/CSS and Javascript projects I created during my techdegree program. I can't wait to start my career as a front end developer.
+    </p>
+
     </div>
 </section>
 
 <!-- Portfolio -->
-<section class="container reveal" id="port">
+<section class="container" id="port">
 	<h2>My Portfolio</h2>
 	<div class="row">
-
-		<div class=" portfolio-card">
-
-		    <img src="images/project-6.png" alt="screenshot of the wheel of success" class="portfolio-item">
+        <div class="portfolio-card">
+                <img src="images/project-6.png" alt="screenshot of the wheel of success" class="portfolio-item">
             <div class="portfolio-img-desc">
-			    <p>Project 6 for my Front End Development training. We created a game show app inspired by Wheel of Fortune with HTML/CSS and functionality by JS.</p>
-		    </div>
-            <div class="linked">
-                <a href="https://sydneygallek.github.io/techdegree-project-6/">See it live.</a>
+                <h3>Wheel of Success</h3>
             </div>
+        </div> 
+        <div class="portfolio-card">
+            <a href="https://sydneygallek.github.io/techdegree-project-5/"><img src="images/project-5.png" alt="screenshot of the project five photo grid layout of nature landscapes"></a>
+        <div class="portfolio-img-desc">
+            <h3>Photo Gallery</h3>
+		</div>
 	    </div>
-
         <div class=" portfolio-card">
-		    <img src="images/project-5.png" alt="screenshot of the project five photo grid layout of nature landscapes">
-            <div class="portfolio-img-desc">
-			    <p>Project 5 for my Treehouse Front End Web Development training. We utilized js lightbox to make this page responsive and the images clickable.</p>
-		    </div>
-            <div class="linked">
-                <a href="https://sydneygallek.github.io/techdegree-project-5/">See it live.</a>
-            </div>	
+		    <a href="https://sydneygallek.github.io/project-7/"><img src="images/project-7.png" alt="screenshot of the webapp I made for Treehouse project 7"></a>
+        <div class="portfolio-img-desc">
+            <h3>WebApp</h3>
+		</div>
 	    </div>
         
         <div class=" portfolio-card">
-		    <img src="images/project-7.png" alt="screenshot of the webapp I made for Treehouse project 7">
-            <div class="portfolio-img-desc">
-		    	<p>Project 7 for my Front End Web Development training. This utilized HTML/CSS and used some JS for the responsive aspect.</p>
-		    </div>
-            <div class="linked">
-                <a href="https://sydneygallek.github.io/project-7/">See it live</a>
-            </div>
-	    </div>
-        
-        <div class=" portfolio-card">
-		    <img src="images/project-3.png" alt="screenshot of the webapp I made for Treehouse project 7">
-            <div class="portfolio-img-desc">
-			    <p>Project 3 for my Front End Web Development training. We learned mobile first HTML/CSS coding with a form.</p>
-            </div>	    
-            <div class="linked">
-                <a href="https://sydneygallek.github.io/techdegree-project-3/">See it live.</a>
-            </div>
+		    <a href="https://sydneygallek.github.io/techdegree-project-3/"><img src="images/project-3.png" alt="screenshot of the webapp I made for Treehouse project 7"></a>
+        <div class="portfolio-img-desc">
+			<h3>Signup Form</h3>
+        </div>
 	    </div>
     </div>
 </section>
 				
-<!--CONTACT-->
-<section class="container reveal" id="footer">	
-	<h2>Contact Me</h2>
+<!--FOOTER-->
+<section class="container" id="footer">	
+<h2>Contact Me</h2>
 	<div class="contact">
         <p>Sydney Gallek
         <br>
@@ -94,36 +88,12 @@
         <br>
         (555) 555-5555</p>
 	</div>
-<!--SOCIALS-->
-    <h3 class="text-center">Find me here</h3>
+<h3 class="text-center">Find me here</h3>
     <div class="socials">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-linkedin"></a>
 	</div>
-
 </section>
-
-    <script>
-        window.addEventListener('scroll', reveal);
-    
-        function reveal(){
-          var reveals = document.querySelectorAll('.reveal');
-    
-          for(var i = 0; i < reveals.length; i++){
-    
-            var windowheight = window.innerHeight;
-            var revealtop = reveals[i].getBoundingClientRect().top;
-            var revealpoint = 150;
-    
-            if(revealtop < windowheight - revealpoint){
-              reveals[i].classList.add('active');
-            }
-            else{
-              reveals[i].classList.remove('active');
-            }
-          }
-        }
-        </script>
-  </body>
+</body>
 </html>
