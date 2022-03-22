@@ -7,19 +7,19 @@ html {
     width: 100%;
 }
 body {
-    font-family: fira sans;
-    background-color: #F0E1CC;
-    width: 100%;
+    font-family: futura;
     color:#011F26;
 }
 
 img {
- width: 100px;
- height: 100px;
+  height:100px;
+  width:50px;
 }
 
 p {
     color:#011F26;
+    font-size:1.2rem;
+    line-height: 2;
 }
 
 h2 {
@@ -47,9 +47,10 @@ a {
 nav {
   display: flex;
   flex-direction: flex-start;
-  background-color: #303C6C;
   width: 100%;
   align-items: center;
+  background-color: #002E54;
+  height:100px;
 }
 
 .leftnav {
@@ -70,7 +71,6 @@ nav > a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    background-color: #303C6C;
     width: 100%;
 }
 
@@ -84,7 +84,6 @@ nav > a:hover {
 /****WELCOME AREA***/
 #introduction {
     display: flex;
-    background-color: #303C6C;
     width: 100%;
     height: 400px;
     align-items: center;
@@ -92,24 +91,24 @@ nav > a:hover {
 }
 
 .intro {
-  color: white;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid black;
   white-space: nowrap; 
   margin: 0 auto; 
+  padding-left: 40px;
   letter-spacing: .15em; 
   animation: 
     typing 3.5s steps(26, end),
     blink-caret .75s step-end infinite;
+  font-size: 30px;
 }
 
-/* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
+
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: black; }
@@ -122,9 +121,162 @@ nav > a:hover {
 
 .intro-container {
   display: flex;
+  width: 50%;
   align-items: center;
   justify-content: space-evenly;
 }
+
+.image-container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.first-image {
+  height: 400px;
+  width: 350px;
+}
+
+.second-section{
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.second-section-img {
+  width: 60%;
+  height: 50%;
+}
+
+.what-i-do {
+  width:100%;
+  padding: 20px 30px;
+  display: flex;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.what-i-do-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.what-i-do-right {
+  width: 50%;
+}
+
+.why-i-do-it {
+  width:100%;
+  height:400px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.why-i-do-it > h3 {
+  padding: 20px;
+}
+.i-like-to-use {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  height: 180px;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  justify-content: center;
+}
+
+/****SKILLS****/
+.skills-container {
+  width: 100%;
+  display: flex;
+}
+
+.left-container {
+  display: flex;
+  width:100%;
+}
+
+#html, #css, #js{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  text-align: center;
+  border: 1px solid black;
+  height: 200px;
+  transition: width 2s, height 4s;
+  font-size: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+#html.permahover {
+  font-size: 50px;
+}
+#css.permahover {
+  display: flex;
+  flex-direction: column;
+}
+#js.permahover {
+  background-color:#A1C7E0;
+}
+#carrot-open.permahover {
+  display: inline-block;
+  width: 10%;
+  animation: fadeIn 2s;
+}
+
+#carrot-close.permahover {
+  display: inline-block;
+  width: 10%;
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#html-text {
+  background-color:#cf9925;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-size:1.4rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.skills-dropdown {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+}
+
+#language-1{
+  background-color: lavender;
+}
+
+#panel {
+  display: flex;
+  width: 100%;
+  background-color: #9bc1d4f2;
+}
+
 
 /****ABOUT ME****/
 #about {
@@ -221,13 +373,11 @@ nav > a:hover {
 #port {
   display: flex;
   flex-direction:column;
-  background-color: #B4DFE5;
 }
-
 
 .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
@@ -236,38 +386,41 @@ nav > a:hover {
 .portfolio-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   position: relative;
-  max-width: 350px;
-  width: 90%;
   margin: auto;
-  position: relative;
+
+
 }
 
-.portfolio-card::after {
+/***.portfolio-card::after {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 350px;
+  width: 70%;
   height: 100%;
   background: rgba(4, 7, 17, 0.932);
   z-index: 2;
   opacity: 0;
+  transition: all 0.8s ease-in-out;
 }
 
 .portfolio-card:hover::after {
   opacity: 1;
-}
+}****/
 
 .portfolio-card img {
-  width: 100%;
+  height: 300px;
+  width:400px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 1;
 }
 
 .portfolio-img-desc {
   position: absolute;
+  height: 300px;
+  width: 100%;
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
@@ -275,8 +428,8 @@ nav > a:hover {
   color: #fff;
   text-align: center;
   font-weight: bolder;
-  z-index: 5;
   opacity: 0;
+  background-color: #252525;
 }
 
 .portfolio-card:hover .portfolio-img-desc  {
@@ -312,6 +465,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    width:100%;
 }
 
 
@@ -340,13 +494,13 @@ section h2{
       display: flex;
   }
   .fa {
-    padding: 20px;
+    padding: 15;
     font-size: 30px;
     width: 4rem;
     text-align: center;
     text-decoration: none;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 40px;
   }
   .fa-facebook {
     background: #3B5998;
